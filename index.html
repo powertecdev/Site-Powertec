@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerTec Tecnologia | Automação Comercial e Câmeras em Guarujá SP</title>
+<meta name="description" content="PDV com NFC-e, câmeras IP, alarmes e controle de acesso em Guarujá e Baixada Santista. Técnico credenciado Intelbras. Ligue: (13) 98146-5773.">
+<!-- Open Graph -->
+<meta property="og:title" content="PowerTec Tecnologia | Automação Comercial e Câmeras em Guarujá SP">
+<meta property="og:description" content="PDV com NFC-e, câmeras IP, alarmes e controle de acesso em Guarujá e Baixada Santista. Técnico credenciado Intelbras.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://powertectecnologia.com.br/">
+<meta property="og:image" content="https://powertectecnologia.com.br/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PowerTec Tecnologia | Guarujá SP">
+<meta name="twitter:description" content="PDV com NFC-e, câmeras IP, alarmes e controle de acesso. Técnico credenciado Intelbras.">
 <!-- ══ SEO GEO TAGS (não conflita com plugins WP) ══ -->
 <meta name="geo.region" content="BR-SP">
 <meta name="geo.placename" content="Guarujá, São Paulo, Brasil">
@@ -175,12 +186,18 @@
 <meta name="color-scheme" content="dark">
 <meta name="msapplication-TileColor" content="#010308">
 
-<!-- Fontes Google: se o seu tema WP já carrega essas fontes, remova esta linha -->
+<!-- Fontes Google: carregamento não-bloqueante via preload trick -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
+<!-- preload: solicita o recurso com alta prioridade mas não bloqueia render -->
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+<!-- fallback para JS desabilitado -->
+<noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap">
+</noscript>
+<link rel="stylesheet" href="styles.min.css">
 </head>
 
 <body class="powertec-page">
@@ -2566,6 +2583,6 @@
 
 
 
-<script src="script.js"></script>
+<script src="script.min.js" defer></script>
 </body>
 </html>

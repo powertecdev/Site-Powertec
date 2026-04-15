@@ -1,3 +1,37 @@
+/* ════════════════════════════════════════════════════════
+   VISIBILITY MANAGER — pausa todos os RAFs quando a aba
+   está em background, economizando CPU e bateria.
+════════════════════════════════════════════════════════ */
+var PT_PAUSED = false;
+document.addEventListener('visibilitychange', function() {
+  PT_PAUSED = document.hidden;
+});
+
+/* Wrapper global: substitui requestAnimationFrame para que
+   todos os loops de canvas respeitem PT_PAUSED */
+var _raf = window.requestAnimationFrame.bind(window);
+window.requestAnimationFrame = function(cb) {
+  if (PT_PAUSED) {
+    /* agenda re-check após 200ms sem bloquear a pilha */
+    return setTimeout(function() { window.requestAnimationFrame(cb); }, 200);
+  }
+  return _raf(cb);
+};
+
+/* ── FPS LIMITER para canvases secundários ──
+   Uso: wrapRaf(callback, 20) → roda a ~20fps em vez de 60fps */
+function wrapRaf(fn, fps) {
+  var interval = 1000 / (fps || 30);
+  var last = 0;
+  function loop(ts) {
+    requestAnimationFrame(loop);
+    if (ts - last < interval) return;
+    last = ts;
+    fn(ts);
+  }
+  requestAnimationFrame(loop);
+}
+
 function powertecROI() {
   var fat   = parseInt((document.getElementById('cFat').value   || '').replace(/[^0-9]/g, '')) || 0;
   var func  = parseInt((document.getElementById('cFunc').value  || '').replace(/[^0-9]/g, '')) || 0;
@@ -1168,6 +1202,7 @@ document.querySelectorAll('.svc-card, .p-card, .plan-card').forEach(function(car
   }
   window.addEventListener('resize', init); init();
   setInterval(function(){
+    if(PT_PAUSED) return;
     ctx.fillStyle = 'rgba(1,3,8,.08)';
     ctx.fillRect(0,0,W,H);
     ctx.font = '11px JetBrains Mono, monospace';
@@ -1179,7 +1214,7 @@ document.querySelectorAll('.svc-card, .p-card, .plan-card').forEach(function(car
       if(y*14 > H && Math.random() > 0.975) drops[i] = 0;
       drops[i]++;
     });
-  }, 50);
+  }, 66);
 })();
 
 /* ── 2. CIRCUIT TRACES (hero) ── */
@@ -1274,13 +1309,14 @@ document.querySelectorAll('.svc-card, .p-card, .plan-card').forEach(function(car
   var cols = Math.floor(W/18), drops = Array(cols).fill(0).map(()=>Math.random()*H/14);
   window.addEventListener('resize',function(){ W=window.innerWidth;H=window.innerHeight;cv.width=W;cv.height=H; });
   setInterval(function(){
+    if(PT_PAUSED) return;
     ctx.fillStyle='rgba(1,3,8,.06)'; ctx.fillRect(0,0,W,H);
     ctx.fillStyle='rgba(0,204,255,.5)'; ctx.font='12px JetBrains Mono,monospace';
     drops.forEach(function(y,i){
       ctx.fillText(Math.random()>.5?'1':'0', i*18, y*14);
       if(y*14>H && Math.random()>.985) drops[i]=0; drops[i]++;
     });
-  }, 80);
+  }, 100);
 })();
 
 /* ── 5. HEX GRID (clients section) ── */
