@@ -99,16 +99,14 @@ function powertecROIReset() {
 
   document.addEventListener('mousemove', function(e) {
     mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
+    dot.style.transform = 'translate(' + (mx - 4) + 'px,' + (my - 4) + 'px) rotate(45deg)';
   });
 
-  // ring follows with smooth lag
+  // ring follows with smooth lag — lerp 0.22 = snappy but visible trail
   (function loop() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
+    rx += (mx - rx) * 0.22;
+    ry += (my - ry) * 0.22;
+    ring.style.transform = 'translate(' + (rx - 16) + 'px,' + (ry - 16) + 'px) rotate(45deg)';
     requestAnimationFrame(loop);
   })();
 
