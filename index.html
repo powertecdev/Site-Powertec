@@ -1796,183 +1796,51 @@
 <section id="loja">
   <div class="loja-wrap">
 
-    <!-- header -->
-    <div class="loja-top rev-right">
-      <div class="loja-meta">
-        <div class="sec-kicker">Nossa Loja Online</div>
-        <h2 class="sec-h2 glitch-in">Acessórios &amp; <em>Periféricos</em></h2>
-        <p style="font-size:13px;color:var(--m3);margin-top:10px;max-width:500px;line-height:1.75;">
-          Produtos selecionados para instalação profissional, organização de rede e proteção do seu sistema.
-          Adquira online com segurança e retire ou receba em Guarujá.
-        </p>
+    <div class="loja-portal rev">
+      <!-- grid decorativo de categorias -->
+      <div class="lp-cats">
+        <div class="lp-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><span>CFTV</span></div>
+        <div class="lp-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>Cabos</span></div>
+        <div class="lp-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span>Rede</span></div>
+        <div class="lp-cat lp-cat--hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Energia</span></div>
+        <div class="lp-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><span>Câmeras</span></div>
+        <div class="lp-cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Fixação</span></div>
       </div>
-      <div class="loja-cta-area">
-        <a class="loja-see-all" href="#" target="_blank" rel="noopener noreferrer">Ver catálogo completo →</a>
-        <span class="loja-trust">Compra segura via Nuvem Shop</span>
-      </div>
-    </div>
 
-    <!-- filtros -->
-    <div class="loja-filters rev rd1" role="group" aria-label="Filtrar por categoria">
-      <button class="lj-chip on" onclick="filtProd('todos',this)" aria-pressed="true"><span class="lj-dot"></span>Todos</button>
-      <button class="lj-chip" onclick="filtProd('cabo',this)" aria-pressed="false"><span class="lj-dot"></span>Cabos</button>
-      <button class="lj-chip" onclick="filtProd('conector',this)" aria-pressed="false"><span class="lj-dot"></span>Conectores</button>
-      <button class="lj-chip" onclick="filtProd('fixacao',this)" aria-pressed="false"><span class="lj-dot"></span>Fixação</button>
-      <button class="lj-chip" onclick="filtProd('energia',this)" aria-pressed="false"><span class="lj-dot"></span>Energia</button>
-      <button class="lj-chip" onclick="filtProd('rede',this)" aria-pressed="false"><span class="lj-dot"></span>Rede</button>
-    </div>
+      <!-- conteúdo central -->
+      <div class="lp-center">
+        <div class="lp-badge">Loja Online</div>
+        <h2 class="lp-title">Acessórios &amp;<br><em>Periféricos</em> Técnicos</h2>
+        <p class="lp-sub">Cabos, conectores, fontes, câmeras e equipamentos de rede selecionados pela nossa equipe técnica. Compra segura, entrega na Baixada Santista.</p>
 
-    <!-- grid de produtos -->
-    <div class="prod-grid rev rd2" id="p-grid">
-
-      <!-- 1 -->
-      <div class="p-card tilt-card" data-cat="cabo"><div class="tilt-shine"></div>
-        <div class="pc-thumb">
-          <div class="pc-thumb-inner"><div class="pc-emoji">🔌</div></div>
-          <div class="pc-grid"></div>
-          <div class="pc-tl"></div><div class="pc-br"></div>
-          <div class="pc-badge hot-b">Mais Vendido</div>
-          <div class="pc-stock"><span class="pc-sd ok"></span>Em estoque</div>
+        <div class="lp-pills">
+          <span class="lp-pill">CFTV &amp; DVR</span>
+          <span class="lp-pill">Cabos Cat5e / Coaxial</span>
+          <span class="lp-pill">Switches PoE</span>
+          <span class="lp-pill">Fontes 12V</span>
+          <span class="lp-pill">Conectores BNC</span>
+          <span class="lp-pill">Suportes</span>
         </div>
-        <div class="pc-body">
-          <div class="pc-cat">Cabos</div>
-          <div class="pc-name">Cabo HDMI 4K 3m Premium</div>
-          <div class="pc-desc">Cabo HDMI 2.0 com malha trançada, suporte 4K 60Hz, HDR, ARC. Conectores banhados a ouro. Ideal para DVR e monitores.</div>
-          <div class="pc-tags"><span class="pc-tag">4K 60Hz</span><span class="pc-tag">HDR</span><span class="pc-tag">3 metros</span><span class="pc-tag">Ouro</span></div>
-        </div>
-        <div class="pc-foot">
-          <div class="pc-price-blk">
-            <div class="pc-old">R$ 79,00</div>
-            <div class="pc-price"><b>R$</b> 59,90</div>
-          </div>
-          <a class="pc-buy" href="#" target="_blank" rel="noopener noreferrer">Comprar ↗</a>
+
+        <a class="lp-cta" href="https://powertectecnologia.lojavirtualnuvem.com.br" target="_blank" rel="noopener noreferrer">
+          <span class="lp-cta-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </span>
+          Acessar a Loja
+          <svg class="lp-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <div class="lp-trust">
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1l5.5 2v5c0 4-5.5 7-5.5 7S2.5 12 2.5 8V3L8 1z"/></svg>Compra segura</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="14" height="10" rx="1.5"/><path d="M4 4V3a4 4 0 0 1 8 0v1"/></svg>SSL certificado</span>
+          <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l6-2 6 2v6l-6 4-6-4V4z"/></svg>Suporte pós-venda</span>
         </div>
       </div>
 
-      <!-- 2 -->
-      <div class="p-card tilt-card" data-cat="conector"><div class="tilt-shine"></div>
-        <div class="pc-thumb">
-          <div class="pc-thumb-inner"><div class="pc-emoji">🔧</div></div>
-          <div class="pc-grid"></div>
-          <div class="pc-tl"></div><div class="pc-br"></div>
-          <div class="pc-stock"><span class="pc-sd ok"></span>Em estoque</div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-cat">Conectores</div>
-          <div class="pc-name">Kit Conector BNC Compressão 10un</div>
-          <div class="pc-desc">Conectores BNC de compressão para cabo RG59/RG6. Encaixe perfeito sem ferramentas especiais. Kit com 10 unidades.</div>
-          <div class="pc-tags"><span class="pc-tag">BNC</span><span class="pc-tag">RG59/RG6</span><span class="pc-tag">Kit 10un</span></div>
-        </div>
-        <div class="pc-foot">
-          <div class="pc-price-blk">
-            <div class="pc-price"><b>R$</b> 29,90</div>
-          </div>
-          <a class="pc-buy" href="#" target="_blank" rel="noopener noreferrer">Comprar ↗</a>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="p-card tilt-card" data-cat="fixacao"><div class="tilt-shine"></div>
-        <div class="pc-thumb">
-          <div class="pc-thumb-inner"><div class="pc-emoji">🪝</div></div>
-          <div class="pc-grid"></div>
-          <div class="pc-tl"></div><div class="pc-br"></div>
-          <div class="pc-badge new-b">Novo</div>
-          <div class="pc-stock"><span class="pc-sd ok"></span>Em estoque</div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-cat">Fixação</div>
-          <div class="pc-name">Suporte Articulado Câmera 360°</div>
-          <div class="pc-desc">Suporte universal em metal para câmeras dome e bullet. Rotação 360° horizontal e 180° vertical. Teto ou parede.</div>
-          <div class="pc-tags"><span class="pc-tag">360°</span><span class="pc-tag">Metal</span><span class="pc-tag">Universal</span></div>
-        </div>
-        <div class="pc-foot">
-          <div class="pc-price-blk">
-            <div class="pc-old">R$ 49,00</div>
-            <div class="pc-price"><b>R$</b> 38,90</div>
-          </div>
-          <a class="pc-buy" href="#" target="_blank" rel="noopener noreferrer">Comprar ↗</a>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="p-card tilt-card" data-cat="energia"><div class="tilt-shine"></div>
-        <div class="pc-thumb">
-          <div class="pc-thumb-inner"><div class="pc-emoji">⚡</div></div>
-          <div class="pc-grid"></div>
-          <div class="pc-tl"></div><div class="pc-br"></div>
-          <div class="pc-badge sale-b">Oferta</div>
-          <div class="pc-stock"><span class="pc-sd low"></span>Últimas unidades</div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-cat">Energia</div>
-          <div class="pc-name">Fonte 12V 5A Bivolt CFTV</div>
-          <div class="pc-desc">Fonte chaveada bivolt para alimentação de câmeras analógicas e IP. Proteção contra curto e sobrecarga. Conector P4.</div>
-          <div class="pc-tags"><span class="pc-tag">12V 5A</span><span class="pc-tag">Bivolt</span><span class="pc-tag">P4</span></div>
-        </div>
-        <div class="pc-foot">
-          <div class="pc-price-blk">
-            <div class="pc-old">R$ 59,00</div>
-            <div class="pc-price"><b>R$</b> 44,90</div>
-          </div>
-          <a class="pc-buy" href="#" target="_blank" rel="noopener noreferrer">Comprar ↗</a>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="p-card tilt-card" data-cat="rede"><div class="tilt-shine"></div>
-        <div class="pc-thumb">
-          <div class="pc-thumb-inner"><div class="pc-emoji">🌐</div></div>
-          <div class="pc-grid"></div>
-          <div class="pc-tl"></div><div class="pc-br"></div>
-          <div class="pc-stock"><span class="pc-sd ok"></span>Em estoque</div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-cat">Rede</div>
-          <div class="pc-name">Switch 8 Portas PoE 100Mbps</div>
-          <div class="pc-desc">Switch não gerenciável com 8 portas PoE + 2 uplink. Alimenta câmeras IP sem fonte separada. Budget 60W total.</div>
-          <div class="pc-tags"><span class="pc-tag">8P PoE</span><span class="pc-tag">60W</span><span class="pc-tag">Plug&Play</span></div>
-        </div>
-        <div class="pc-foot">
-          <div class="pc-price-blk">
-            <div class="pc-price"><b>R$</b> 189,90</div>
-          </div>
-          <a class="pc-buy" href="#" target="_blank" rel="noopener noreferrer">Comprar ↗</a>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="p-card tilt-card" data-cat="cabo"><div class="tilt-shine"></div>
-        <div class="pc-thumb">
-          <div class="pc-thumb-inner"><div class="pc-emoji">🧵</div></div>
-          <div class="pc-grid"></div>
-          <div class="pc-tl"></div><div class="pc-br"></div>
-          <div class="pc-badge hot-b">Popular</div>
-          <div class="pc-stock"><span class="pc-sd ok"></span>Em estoque</div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-cat">Cabos</div>
-          <div class="pc-name">Cabo UTP Cat5e 305m — 100% Cobre</div>
-          <div class="pc-desc">Bobina 305m, 4 pares trançados, condutor 24AWG sólido, capa cinza LSZH. Homologado Anatel. Para CFTV e rede.</div>
-          <div class="pc-tags"><span class="pc-tag">Cat5e</span><span class="pc-tag">305m</span><span class="pc-tag">100% Cu</span><span class="pc-tag">Anatel</span></div>
-        </div>
-        <div class="pc-foot">
-          <div class="pc-price-blk">
-            <div class="pc-old">R$ 219,00</div>
-            <div class="pc-price"><b>R$</b> 179,90</div>
-          </div>
-          <a class="pc-buy" href="#" target="_blank" rel="noopener noreferrer">Comprar ↗</a>
-        </div>
-      </div>
-
-    </div><!-- /prod-grid -->
-
-    <!-- trust strip -->
-    <div class="loja-trust-strip rev rd3">
-      <div class="lts-item"><div class="lts-ico">🔒</div><div><div class="lts-t">Compra Segura</div><div class="lts-d">SSL + Nuvem Shop certificado</div></div></div>
-      <div class="lts-item"><div class="lts-ico">🚚</div><div><div class="lts-t">Entrega Guarujá</div><div class="lts-d">Frete especial para a Baixada Santista</div></div></div>
-      <div class="lts-item"><div class="lts-ico">🛠️</div><div><div class="lts-t">Suporte Pós-Venda</div><div class="lts-d">Assistência técnica incluída</div></div></div>
-      <div class="lts-item"><div class="lts-ico">💬</div><div><div class="lts-t">Dúvidas sobre produtos?</div><div class="lts-d"><a href="https://wa.me/5513981916256?text=Ol%C3%A1!%20Tenho%20d%C3%BAvida%20sobre%20um%20produto%20da%20loja." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a></div></div></div>
+      <!-- efeito de fundo -->
+      <div class="lp-glow" aria-hidden="true"></div>
+      <div class="lp-ring lp-ring--1" aria-hidden="true"></div>
+      <div class="lp-ring lp-ring--2" aria-hidden="true"></div>
     </div>
 
   </div>
